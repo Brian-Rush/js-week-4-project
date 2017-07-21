@@ -3,16 +3,42 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { routing } from './app.routing';
 import { AppComponent } from './app.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+// import { FindComponent } from './find/find.component';
+// import { AddComponent } from './add/add.component';
+// import { DetailComponent } from './detail/detail.component';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { masterFirebaseConfig } from './api-keys';
+import { geoKey } from './api-keys';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+}
+
+export const geoKey2 = geoKey;
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeComponent,
+    // FindComponent,
+    // AddComponent,
+    // DetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
