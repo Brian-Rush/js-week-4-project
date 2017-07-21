@@ -14,7 +14,7 @@ export class CacheService {
     return this.caches;
   }
 
-  addCaches(newCache: Cache) {
+  addCache(newCache: Cache) {
     this.caches.push(newCache);
   }
 
