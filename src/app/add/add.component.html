@@ -1,0 +1,22 @@
+<p>
+  add works!
+</p>
+<form>
+  <div>
+    <label>Creator</label>
+    <input #newCreator>
+  </div>
+  <div>
+    <label>Latitude</label>
+    <input #newLat>
+  </div>
+  <div>
+    <label>Longitude</label>
+    <input #newLng>
+  </div>
+  <div>
+    <label>Address</label>
+    <input #newAddress>
+  </div>
+</form>
+<button (click)="submitForm(newCreator.value, newLat.value, newLng.value, newAddress.value); newCreator.value=''; newLat.value=''; newLng.value=''; newAddress.value=''">Add Cache</button>

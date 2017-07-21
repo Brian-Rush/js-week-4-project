@@ -6,8 +6,8 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-// import { FindComponent } from './find/find.component';
-// import { AddComponent } from './add/add.component';
+import { FindComponent } from './find/find.component';
+import { AddComponent } from './add/add.component';
 // import { DetailComponent } from './detail/detail.component';
 
 import { AngularFireModule } from 'angularfire2';
@@ -28,6 +28,8 @@ export const geoKey2 = geoKey;
   declarations: [
     AppComponent,
     WelcomeComponent,
+    FindComponent,
+    AddComponent,
     // FindComponent,
     // AddComponent,
     // DetailComponent
