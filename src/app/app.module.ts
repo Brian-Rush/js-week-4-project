@@ -30,8 +30,6 @@ export const geoKey2 = geoKey;
     WelcomeComponent,
     FindComponent,
     AddComponent,
-    // FindComponent,
-    // AddComponent,
     // DetailComponent
   ],
   imports: [

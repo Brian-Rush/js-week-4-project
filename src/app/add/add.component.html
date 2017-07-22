@@ -14,9 +14,21 @@
     <label>Longitude</label>
     <input #newLng>
   </div>
+</form>
+<button (click)="submitLatLng(newCreator.value, newLat.value, newLng.value); newCreator.value=''; newLat.value=''; newLng.value='';">Add Cache</button>
+
+<form class="" action="index.html" method="post">
   <div>
-    <label>Address</label>
-    <input #newAddress>
+    <label>Creator</label>
+    <input #newCreator2>
+  </div>
+  <div>
+    <label>Street Address</label>
+    <input #newStreetAddress>
+    <label>City</label>
+    <input #newCity>
+    <label>State</label>
+    <input #newState>
   </div>
 </form>
-<button (click)="submitForm(newCreator.value, newLat.value, newLng.value, newAddress.value); newCreator.value=''; newLat.value=''; newLng.value=''; newAddress.value=''">Add Cache</button>
+<button (click)="submitAddress(newCreator2.value, newStreetAddress.value, newCity.value, newState.value); newCreator2.value=''; newStreetAddress.value=''; newState.value=''">Add Cache</button>

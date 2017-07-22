@@ -19,7 +19,7 @@ export class LocationService {
   }
 
   getByAddress(address: string) {
-    return this.http.get("api call that uses address")
+    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=" + geoKey)
   }
 
 }
