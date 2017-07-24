@@ -10,16 +10,20 @@ import { CacheService } from './cache.service';
 export class LocationService {
   locatedCache: Cache;
 
-  constructor(private http: Http, private cacheService: CacheService) { }
+  constructor(
+    private http: Http,
+    private cacheService: CacheService
+  ) { }
 
-  getByLatLng(lat: number, lng: number) {
-    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&key=" + geoKey, function(response) {
+  getByLatLng(lat: string, lng: string) {
+    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&key=" + geoKey
+    , function(response) {
       console.log(response);
     });
   }
 
-  getByAddress(address: string) {
-    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=" + geoKey)
-  }
+  // getByAddress(address: string) {
+  //   return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=" + geoKey)
+  // }
 
 }
